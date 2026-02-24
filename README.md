@@ -62,7 +62,7 @@ Basic styling for table layout and formatting.
 
 ## Requirements
 
--   Python 3.10 or newer
+-   Python 3.12 or newer
 -   Internet connection
 -   requests library
 
