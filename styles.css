@@ -1,0 +1,65 @@
+/* styles.css*/
+
+/* 1) Basic page styles */
+body {
+  margin: 0;
+  padding: 40px 16px;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;   /* light gray background */
+  color: #222;           /* dark text */
+}
+
+/* Title */
+h2 {
+  margin: 0 auto 8px;
+  max-width: 900px;
+}
+
+/* 2) The main table container */
+.table {
+  max-width: 900px;
+  margin: 16px auto 0;        /* center it */
+  background: #fff;           /* white card */
+  border: 1px solid #ddd;     /* light border */
+  border-radius: 10px;
+  overflow: hidden;           /* keeps rounded corners clean */
+}
+
+/* 3) Each row is a grid with 3 columns */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* three equal columns */
+}
+
+/* Header row */
+.row.header {
+  background: #eef2ff;        /* light bluish background */
+  font-weight: bold;
+}
+
+/* 4) Each cell */
+.cell {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove border from last row */
+.row:last-child .cell {
+  border-bottom: none;
+}
+
+/* 5) Align numbers to the right */
+.row .cell:nth-child(2),
+.row .cell:nth-child(3) {
+  text-align: right;
+}
+
+/* Make currency codes a bit stronger */
+.row .cell:nth-child(1) {
+  font-weight: 600;
+}
+
+/* 6) Simple hover effect on body rows (not header) */
+.row:not(.header):hover {
+  background: #f3f6ff;
+}
